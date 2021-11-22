@@ -1,0 +1,31 @@
+[
+	{
+	
+		"name": "Le Meridien Dhaka",
+		"cost":"150",
+		"img": "https://cache.marriott.com/marriottassets/marriott/DACMD/dacmd-exterior-evening-3729-hor-feat.jpg",
+        "desc":"79/A Commercial Area, Nikunja 2, Khilkhet,, 1229 Dhaka, Bangladesh",
+		"location":"Dhaka",
+		"rating":"5"
+	},
+	{
+		
+		"name": "The Westin Dhaka",
+		"cost":"100",
+		"img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Westin_hostel.jpg/1200px-Westin_hostel.jpg",
+        "desc":"Main Gulshan Avenue, Gulshan Avenue, Dhaka, Gulshan, 1212 Dhaka, Bangladesh",
+		"location":"Dhaka",
+		"rating":"4.7"
+
+	},
+	{
+		
+		"name": "Doreen Hotel Dhaka",
+		"cost":"120",
+		"img": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/252826206.jpg?k=220bdf00916d9bcd138b0a137127bcab2adeee414c15f7cb447c45495ecac56d&o=&hp=1",
+        "desc":"  House - 16/B, Road - 35, Gulshan - 2, Gulshan, 1212 Dhaka, Bangladesh ",
+		"location":"Dhaka",
+		"rating":"4.3"
+	}
+	
+]

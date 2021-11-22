@@ -1,0 +1,60 @@
+[
+	
+    
+    {
+		
+		"name": "Christiana Rodes",
+		"img": "https://image.freepik.com/free-photo/happy-young-travel-asian-woman-using-mobile-phone-relax-street_1150-42473.jpg",
+		"rating":"4.9"
+	},
+    {
+        
+        "name": "Sung Chi",
+        "img": "https://as1.ftcdn.net/v2/jpg/03/01/62/64/500_F_301626465_af6oETmM2cMVO51FhYEgiDiTrtzOax81.jpg",
+		"rating":"4.3"
+        
+    },
+    {
+     
+        "name": "Lana Lina",
+        "img": "https://image.freepik.com/free-photo/joyful-female-has-expedition-tour-makes-selfie-portrait-stretches-hand-camera-smiles-broadly_273609-25799.jpg",
+		"rating":"4.2"
+    },
+    {
+       
+        "name": "Jenifer",
+        "img": "https://image.freepik.com/free-photo/girl-taxi-tuk-tuk_169016-1950.jpg",
+		
+		"rating":"3.8"
+    },
+    {
+      
+        "name": "Don David",
+        "img": "https://image.freepik.com/free-photo/selfie-travelers_1098-13463.jpg",
+		"rating":"3.3"
+    },
+    {
+    
+        "name": "Brodman ",
+        "img": "https://img.freepik.com/free-photo/tourist-young-couple-tour-taking-selfie-digital-tablet_23-2147841547.jpg?size=338&ext=jpg",
+   
+		"rating":"4.5"
+    },
+    {
+    
+        "name": "Tim Hog",
+        "img": "https://image.freepik.com/free-photo/back-view-happy-stylish-tourist-czech-republic-handsome-man-travelling-europe_230311-33624.jpg",
+		
+		"rating":"4.6"
+    },
+	{
+   
+		"name": "David Tom",
+		"img": "https://image.freepik.com/free-photo/two-elderly-people-city-tour-wearing-surgical-mask-due-coronavirus_465191-1763.jpg",
+		
+		"rating":"4.9"
+	},
+	
+
+
+]

@@ -1,0 +1,113 @@
+[
+	
+    
+    {
+		
+		"name": "Dhaka",
+		"img": "https://media.istockphoto.com/photos/evening-view-of-skyscraper-in-dhaka-picture-id1181657227?k=20&m=1181657227&s=612x612&w=0&h=BltIuog0Bjt-BrXdxxcnBIAe11uXAS0u8LJzYh3ipzk=",
+		"cost":"200",
+		"rating":"4.9"
+	},
+    {
+        
+        "name": "Lalbaagh Fort",
+        "img": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQ5DCCtj9OCHRfdHYvs6YysCW1piNIUYdYGdOyDsorE1eSguPr-vSsI_pLxrEqbkdLWZCEWj9F7dSGhJyXpIAForQ",
+		"cost":"80",
+		"rating":"4.3"
+        
+    },
+    {
+     
+        "name": "Ahsan Manzil Museum",
+        "img": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRmT89KpPbWdfD5l4RrXMJ68xW7lKPUz1qlJ4ltHfOhTho_Ku2C34lTSnyt7GYd1HWsOejlqVsWa6ZOpfbGDgMfFw",
+		"cost":"70",
+		"rating":"4.2"
+    },
+    {
+       
+        "name": "Bangladesh National Parliament",
+        "img": "https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcRMCejcEsE1IwVpFFgcriXmjMgpVHH2c1OtIdBs3wrhyguupV_DvxEdxHjcMCkVOaRY50KGVd0Fy_eGZ5JUWj9mKw",
+		"cost":"20",
+		"rating":"3.8"
+    },
+    {
+      
+        "name": "Central Shaheed Minar",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbbTABhkz_N23Nh4cA-ei_iKXRZtODxbcZzh4GarPn8Q11FAZpmE_Q_C63jwWorll4mQ8&usqp=CAU",
+		"cost":"30",
+		"rating":"3.3"
+    },
+    {
+    
+        "name": "Baitul Mukarram National Mosque",
+        "img": "https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQYxJAFfnX_QsWT4zl9Wwl-RT52GZV-xBalYCVU0nmgxmL1-2KnP5ORYN40_8ftc2tt7YqpIEWZ4DIX72zfkKoJDg",
+        "cost":"20",
+		"rating":"2.5"
+    },
+    {
+    
+        "name": "Curzon Hall",
+        "img": "https://lh5.googleusercontent.com/p/AF1QipOaKNyRj6JhptfMNPeJObT31ieqs55hORIzcxeH=w464-h260-n-k-no",
+		"cost":"40",
+		"rating":"4.6"
+    },
+	{
+   
+		"name": "Chattagram",
+		"cost":"1500",
+		"img": "http://touristplace.bangladeshinformation.info/wp-content/uploads/sites/7/2018/11/chittagong.jpg",
+		
+		"rating":"4.9"
+	},
+	{
+   
+		"name": "Sylhet",
+		"cost":"1200",
+		"img": "https://www.bdtrips.com/wp-content/uploads/2015/04/Tea-Garden-in-Sylhet-Bangladesh.jpg",
+		"rating":"4.5"
+	},
+	{
+	
+		"name": "Rangamati",
+		"cost":"1300",
+
+		"img": "https://www.thefinancetoday.net/uploads/shares/Rangamati_hanging_Bridge-2019-12-24-12-47-02.jpg",
+		"rating":"5"
+	},
+	{
+   
+		"name": "Bandanban",
+		"cost":"1250",
+		"img": "https://www.travelmate.com.bd/wp-content/uploads/2021/02/Buddha-Dhatu-Jadi-Golden-Temple.jpg",
+		"rating":"4.7"
+	},
+	{
+		"name": "Cox Bazar",
+		"cost":"1500",
+		"img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ3hVdH3jJxwmOqnpKi9FWdOcBqgghdTs0t1cXXJTJQO2jD1N6rUy1daeyxqUzSfTNdzc&usqp=CAU",
+		"rating":"4.5"
+	},
+	{
+		
+		"name": "Kuakata",
+		"cost":"1050",
+		"img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdIotOMnEpD2tzcQmqZNm7GqM7KDf-xvwCLy-ynXP7aMs_duNfXf9bngaKO9IYfvyjHPY&usqp=CAU",
+		"rating":"3.9"
+	},
+	{
+		
+		"name": "Khagrachari",
+		"cost":"800",
+		"img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa5YaUuSv_l2mS4E2tJTFfwo2WiSmwl32EPU880vxlCKHuc0KC3yzqAEVwZNsLOIkkSHc&usqp=CAU",
+		"rating":"4.9"
+	},
+    {
+		
+		"name": "Sajek",
+		"cost":"1400",
+		"img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhvllmpERS3FP8D63D0wsDYPMna0kDXENPCKEsNuHzbDLcfuQ9n4-geV6ZCe5DJf3s1QE&usqp=CAU",
+		"rating":"5"
+	}
+
+
+]

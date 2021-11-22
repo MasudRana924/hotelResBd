@@ -1,0 +1,27 @@
+.link{
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+    font-family: cursive;
+   
+}
+.link:hover{
+    color:black;
+}
+.signup-button{
+    background-color: MediumSpringGreen;
+    border:MediumSpringGreen;
+    border-radius: 15px;
+  
+}
+.nav-brand{
+    text-decoration: none;
+    color: limegreen;
+    font-family: cursive;
+}
+.nav-brand:hover{
+    color: limegreen;
+}
+.toggle{
+    background-color: limegreen;
+}
