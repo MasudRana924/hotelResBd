@@ -6,13 +6,15 @@ import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import DatePicker from '@mui/lab/DatePicker';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch,faArrowRight } from '@fortawesome/free-solid-svg-icons'
-import { Link ,useHistory} from 'react-router-dom';
+import { faSearch, faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { Link, useHistory } from 'react-router-dom';
 import Hotels from '../Hotels/Hotels';
 import Experiences from '../Experiences/Experiences';
-import { addToDb } from '../../Utilities/FakeDb';
+import useAuth from './../../Hooks/useAuth';
 
 const HomePage = () => {
+    const {user}=useAuth()
+    const email=user.email
     const [places, setPlaces] = useState([])
     const [hotels, setHotels] = useState([])
     const [aDate, setAdate] = React.useState(null);
@@ -22,7 +24,7 @@ const HomePage = () => {
     const [plus, setPlus] = useState(0)
     const [children, setChildren] = useState(1)
     const [adult, setAdult] = useState(1)
-    const history=useHistory()
+    const history = useHistory()
     const handleAplus = e => {
 
         setAdult(adult + 1)
@@ -66,16 +68,28 @@ const HomePage = () => {
             .then(data => setPlaces(data.slice(0, 3)))
     }, [])
 
-    const handleApply=e=>{
-        const data={adult,children,plus,aDate,dDate}
-        
-         if(aDate && dDate ){
-            history.push('/hotels')
-         }
-         else{
-             alert('please enter arrival date ')
-         }  
-       e.preventDefault()
+    const handleApply = e => {
+      const  adate=aDate.toLocaleDateString()
+      const  ddate=dDate.toLocaleDateString()
+        const data = {email, adult, children, plus,adate, ddate}
+        fetch('http://localhost:5000/postapply', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => {
+                if (result) {
+                    
+                    history.push('/hotels')
+                }
+
+                else {
+                    alert('please enter arrival date ')
+                }
+            })
+
+        e.preventDefault()
     }
     return (
         <Container fluid className="mt-5 pt-5">
