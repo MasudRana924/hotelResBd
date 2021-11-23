@@ -1,0 +1,42 @@
+
+.insta-icon{
+    font-size: 30px;
+    color:SpringGreen;
+}
+.fb-icon{
+    font-size: 30px;  
+    color:SpringGreen;
+  
+}
+.youtube-icon{
+    font-size: 30px;
+    color:SpringGreen;
+   
+}
+.google-icon{
+    color:SpringGreen;
+    font-size: 30px;
+}
+.github-link{
+    font-family: cursive;
+    color: black;
+    font-weight: bold;
+}
+.user-details{
+    display:flex;
+}
+.user-details p{
+    font-size: 12px;
+    margin-top: 10px;
+}
+.apple-icon{
+    color:white;
+}
+.play-icon{
+    color:rgba(0, 0, 255, 0.925);
+}
+.btn-app{
+    background-color:black;
+    border:black;
+    color:white;
+}

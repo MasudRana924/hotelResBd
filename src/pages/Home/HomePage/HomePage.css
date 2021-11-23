@@ -1,5 +1,4 @@
-.input{
-    
+.input{  
     outline-style: none;
     border:1px solid white;
     border-bottom:1px solid gainsboro;
@@ -41,15 +40,22 @@
 }
 .guest{
     border-bottom: 1px solid gainsboro;
+    font-size: 15px;
 }
 .apply{
     background-color: SpringGreen;
     border:SpringGreen;
+    border-radius: 15px;
+    font-family: cursive;
+    color:white;
    
 }
 .search{
     background-color: SpringGreen;
     border:SpringGreen;
+    border-radius: 15px;
+    font-family: cursive;
+    color:white;
     
 }
 .link{

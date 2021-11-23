@@ -25,3 +25,17 @@
 .toggle{
     background-color: limegreen;
 }
+.user-link{
+    text-decoration: none;
+    font-size: 18px;
+    color:grey;
+    padding-left: 15px;
+}
+.user-icon{
+    color:gray;
+    margin-right: 15px;
+}
+#collasible-nav-dropdown{
+    color: black;
+     font-family: cursive;
+}

@@ -7,9 +7,10 @@ import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import DatePicker from '@mui/lab/DatePicker';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch,faArrowRight } from '@fortawesome/free-solid-svg-icons'
-import { Link } from 'react-router-dom';
+import { Link ,useHistory} from 'react-router-dom';
 import Hotels from '../Hotels/Hotels';
 import Experiences from '../Experiences/Experiences';
+import { addToDb } from '../../Utilities/FakeDb';
 
 const HomePage = () => {
     const [places, setPlaces] = useState([])
@@ -18,10 +19,10 @@ const HomePage = () => {
     const [dDate, setDdate] = React.useState(null);
     const search = <FontAwesomeIcon icon={faSearch} />
     const arrow = <FontAwesomeIcon icon={faArrowRight} className="rating" />
-
     const [plus, setPlus] = useState(0)
     const [children, setChildren] = useState(1)
     const [adult, setAdult] = useState(1)
+    const history=useHistory()
     const handleAplus = e => {
 
         setAdult(adult + 1)
@@ -64,6 +65,18 @@ const HomePage = () => {
             .then(res => res.json())
             .then(data => setPlaces(data.slice(0, 3)))
     }, [])
+
+    const handleApply=e=>{
+        const data={adult,children,plus,aDate,dDate}
+        
+         if(aDate && dDate ){
+            history.push('/hotels')
+         }
+         else{
+             alert('please enter arrival date ')
+         }  
+       e.preventDefault()
+    }
     return (
         <Container fluid className="mt-5 pt-5">
             <Row xs={1} md={2}>
@@ -79,7 +92,7 @@ const HomePage = () => {
                         </Card>
 
                     </div>
-                    <form action="" className="w-75 mx-auto">
+                    <form onSubmit={handleApply} className="w-75 mx-auto">
                         <div className="mt-1 pt-1 d-flex">
                             <div className=" me-1">
                                 <LocalizationProvider dateAdapter={AdapterDateFns}>
@@ -109,7 +122,7 @@ const HomePage = () => {
                         <div className="mt-1 pt-1">
                             <Card>
                                 <span className="text-start text-muted ms-3 fs-6">Guest</span>
-                                <Card.Title className="pt-3 text-start ms-3 guest pb-3">{adult} Adults , {children} Child , {plus} Babies</Card.Title>
+                                <p className="pt-3 text-start ms-3 guest pb-3">{adult} Adults , {children} Child , {plus} Babies</p>
                                 <Card.Body>
                                     <div className="plus-minus">
                                         <p>Adults</p>
@@ -139,14 +152,14 @@ const HomePage = () => {
                                             <button onClick={handlePlus} className="plus">+</button>
                                         </div>
                                     </div>
-                                    <Button size="sm" className="mt-1 apply ">APPLY</Button>
+                                    <button size="sm" className="mt-1 apply ">APPLY</button>
                                 </Card.Body>
 
                             </Card>
                         </div>
 
                     </form>
-                    <Button size="sm" className=" search w-75 mx-auto mt-1 ">{search} Search</Button>
+                    <button size="sm" className=" search w-75 mx-auto mt-1 ">{search} Search</button>
                 </Col>
                 <Col md={7}>
                     <div>

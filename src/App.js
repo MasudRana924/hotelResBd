@@ -10,11 +10,11 @@ import Home from './pages/Home/Home/Home';
 import Header from './pages/Home/Shared/Header/Header';
 import AllHotels from './pages/Home/AllHotels/AllHotels';
 import Places from './pages/Home/Places/Places';
-
-
+import AuthProvider from './pages/Context/AuthProvider'
 function App() {
   return (
     <div className="App">
+        <AuthProvider>
       <Router>
         <Header></Header>
         <Switch>
@@ -31,7 +31,9 @@ function App() {
             <Places></Places>
           </Route>
         </Switch>
+        
       </Router>
+      </AuthProvider>
      
     </div>
   );

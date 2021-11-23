@@ -1,0 +1,40 @@
+.card-review{
+    text-align: center;
+    opacity: 1;
+    width: 200px;
+    background-color: #fff;
+    height:220px;   
+    margin: 25px  5px 5px 10px;  
+    border: 1px solid gainsboro;
+  
+}
+.out{
+    height:250px;
+}
+.container{
+ 
+  height:350px;
+ }
+
+.card-title{
+    color: #262626;
+    display: block;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 18px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 0 !important;
+}
+.review-image{
+    height:130px;  
+    width:100%;
+   
+}
+.review-text{
+    font-size: 12px;
+}
+.slick-prev:before, .slick-next:before {
+    color: black !important;
+  
+}
