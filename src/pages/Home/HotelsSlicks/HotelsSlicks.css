@@ -1,14 +1,10 @@
-.hotel-card{
-  height: 280px;
- 
-}
-.hotel-header{
-    display: flex;
-    justify-content: space-between;
-}
 .hotel-image{
     width:100%;
     height:150px;
+}
+.hotels-card{
+    height:350px;
+    border: 1px solid gainsboro;
 }
 .desc{
     font-size: 15px;
@@ -21,6 +17,7 @@
     color:MediumSpringGreen;
     font-size: 15px;
 }
-.spinner{
-    color:MediumSpringGreen;
+.hotel-header{
+    display: flex;
+    justify-content: space-between;
 }

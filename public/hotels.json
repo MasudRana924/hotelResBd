@@ -26,6 +26,76 @@
         "desc":"  House - 16/B, Road - 35, Gulshan - 2, Gulshan, 1212 Dhaka, Bangladesh ",
 		"location":"Dhaka",
 		"rating":"4.3"
+	},{
+		
+		"name": "InterContinental Dhaka",
+		"cost":"100",
+		"img": "https://images.luxuryhotel.guru/hotelimage.php?p_id=4296140&code=33face9951b85c8336f9733e8836506e&webpage=luxuryhotel.guru&link=https%3A%2F%2Fsubdomain.cloudimg.io%2Fcrop%2F1024x768%2Fq70.fcontrast10.fbright0.fsharp5%2Fhttps%3A%2F%2Fq-xx.bstatic.com%2Fxdata%2Fimages%2Fhotel%2Fmax1536%2F288591246.jpg%3Fk%3D62385f61c013081a35f18c9aecef4a0e2278a876ffed7c34b29d992ad2bc7df9%26o%3D",
+        "desc":" 1 Minto Road, 1000 Dhaka, Bangladesh ",
+		"location":"Dhaka",
+		"rating":"4.9"
+	},
+	{
+		
+		"name": " Renaissance Dhaka Gulshan Hotel",
+		"cost":"130",
+		"img": "https://images.luxuryhotel.guru/hotelimage.php?p_id=6044188&code=555288433c33422221a044605769b26e&webpage=luxuryhotel.guru&link=https%3A%2F%2Fsubdomain.cloudimg.io%2Fcrop%2F1024x768%2Fq70.fcontrast10.fbright0.fsharp5%2Fhttps%3A%2F%2Fq-xx.bstatic.com%2Fxdata%2Fimages%2Fhotel%2Fmax1536%2F237245203.jpg%3Fk%3D6c941cd8e806dc06d16f7200f06b78588e7893f3c7033ae5d4ea2fbbe202ceed%26o%3D",
+        "desc":" 78 Gulshan Avenue, Gulshan, 1212 Dhaka, Bangladesh",
+		"location":"Dhaka",
+		"rating":"5"
+	},
+	{
+		
+		"name": " Pan Pacific Sonargaon Dhaka",
+		"cost":"80",
+		"img": "https://images.luxuryhotel.guru/hotelimage.php?p_id=735371&code=2f0f8bfdedbcbb484791f80b22d6ce90&webpage=luxuryhotel.guru&link=https%3A%2F%2Fsubdomain.cloudimg.io%2Fcrop%2F1024x768%2Fq70.fcontrast10.fbright0.fsharp5%2Fhttps%3A%2F%2Fq-xx.bstatic.com%2Fxdata%2Fimages%2Fhotel%2Fmax1536%2F92583733.jpg%3Fk%3Df9c88d782e45c02585b4a202f64339b7ad3f48aebbab579700b17d27f5b5e500%26o%3D",
+        "desc":"  107 Kazi Nazrul Islam Avenue, 1215 Dhaka, Bangladesh ",
+		"location":"Dhaka",
+		"rating":"4.6"
+	},
+	{
+		
+		"name": "Radisson blu Dhaka Water Garden",
+		"cost":"150",
+		"img": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/252826206.jpg?k=220bdf00916d9bcd138b0a137127bcab2adeee414c15f7cb447c45495ecac56d&o=&hp=1",
+        "desc":" Airport road, 1206 Dhaka, Bangladesh ",
+		"location":"Dhaka",
+		"rating":"5"
+	},	{
+		
+		"name": "Royal Tulip Sea Pearl Beach Resort & Spa",
+		"cost":"150",
+		"img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/99/54/30/swimming-pool.jpg?w=1200&h=-1&s=1",
+        "desc":" Jaliapalong, Inani, Ukhia, Cox's Bazar 4750 Bangladesh ",
+		"location":"Cox's Bazar",
+		"rating":"5"
+	},
+	{
+		
+		"name": "Sayeman Beach Resort",
+		"cost":"140",
+		"img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/c1/b2/2b/sayeman-beach-resort.jpg?w=1200&h=-1&s=1",
+        "desc":" Marine Drive Road, Cox's Bazar 4700 Bangladesh ",
+		"location":"Cox's Bazar",
+		"rating":"5"
+	},
+	{
+		
+		"name": "Rose View Hotel",
+		"cost":"50",
+		"img": "https://ak-d.tripcdn.com/images/220d1900000166hxy5AC3_R_550_412_R5_Q70_D.jpg",
+        "desc":" Shahjalal Uposhohor, Sylhet City 3100 Bangladesh ",
+		"location":"Sylhet",
+		"rating":"4"
+	},
+	{
+		
+		"name": "Nazimgarh Garden Resort",
+		"cost":"60",
+		"img": "https://pix10.agoda.net/hotelImages/295/295519/295519_120116181219.jpg?s=1024x768",
+        "desc":" Khadimnagar, Sylhet City Bangladesh ",
+		"location":"Sylhet",
+		"rating":"4.5"
 	}
 	
 ]

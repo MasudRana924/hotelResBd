@@ -57,7 +57,7 @@ const Reviews = () => {
     return (
         <Container fluid className="mt-5 pt-5 ">
 
-            <div className="container">
+            <div className="container ">
                 <h2 className="text-start ms-3 pt-3 text-muted">Reviews</h2>
                 <Slider {...Rsettings}>
 

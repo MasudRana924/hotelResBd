@@ -3,7 +3,8 @@ import Rating from 'react-rating';
 import { Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStreetView} from '@fortawesome/free-solid-svg-icons'
-import './AllHote.css'
+import './AllHotel.css'
+
 const AllHotel = (props) => {
     const { name, img, desc, cost, rating } = props.hotel
     const map= <FontAwesomeIcon icon={faStreetView} className="rating"/>

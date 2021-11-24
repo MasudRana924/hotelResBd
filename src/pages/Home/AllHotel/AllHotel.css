@@ -1,0 +1,23 @@
+.hotel-card{
+    height: 280px;
+   
+  }
+  
+  .hotel-image{
+      width:100%;
+      height:150px;
+  }
+  .desc{
+      font-size: 15px;
+  }
+  .price-rating{
+      display: flex;
+      justify-content: space-between;
+  }
+  .rating{
+      color:MediumSpringGreen;
+      font-size: 15px;
+  }
+  .spinner{
+      color:MediumSpringGreen;
+  }
