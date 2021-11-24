@@ -1,0 +1,48 @@
+.checkin-section{
+  
+  background-color: orange;
+}
+.checkin-section input{
+    width:90%;
+    color:black;
+    margin-top: -15px;
+    border-style: none;
+    outline-style: none;
+ 
+}
+.search{
+    background-color: white;
+   font-size: 20px;
+
+}
+.date{
+    background-color: white;
+    border: 1px solid black;
+    margin-top: -10px;
+   outline-style: none;
+   border-style: none;
+  
+}
+.check-in{
+    font-size: 14px;
+    text-align: start;
+}
+.adult-child{
+    display: flex;
+    justify-content:space-between;
+    
+}
+.btn-adult-child{
+    background-color: orange;
+    border-style: none;
+    font-size: 25px;
+}
+.search-btn{
+    background-color: black;
+    border-style: none;
+    color:white;
+    width:50%;
+}
+.filter-section{
+    border:1px solid gainsboro;
+}

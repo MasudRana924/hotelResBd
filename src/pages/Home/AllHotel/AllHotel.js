@@ -6,11 +6,11 @@ import { faStreetView} from '@fortawesome/free-solid-svg-icons'
 import './AllHotel.css'
 
 const AllHotel = (props) => {
-    const { name, img, desc, cost, rating } = props.hotel
+    const { name, img, desc, cost, rating ,star,room} = props.hotel
     const map= <FontAwesomeIcon icon={faStreetView} className="rating"/>
     return (
         <Col className="mt-3">
-            <div className="hotels-card">
+            <div className="hotel-card">
                 <img className="hotel-image" src={img} alt="" />
                 <p className="mt-1 fw-bold">{name}</p>
                 <div className=" price-rating ms-1 me-1">
@@ -22,6 +22,11 @@ const AllHotel = (props) => {
                         readonly >
 
                     </Rating>
+
+                </div>
+                <div className=" price-rating ms-1 me-1">
+                    <p className="desc text-start text-muted mt-1">{star}/star</p>
+                    <p className="desc text-start text-muted mt-1">{room} room</p>
 
                 </div>
 

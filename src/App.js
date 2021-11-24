@@ -1,5 +1,5 @@
 import './App.css';
-import React ,{useState} from 'react'
+import React  from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   BrowserRouter as Router,
@@ -29,7 +29,7 @@ function App() {
           <Home aDate={aDate} setAdate={setAdate} setDdate={setDdate}dDate={dDate} ></Home>
           </Route>
           <Route path="/hotels">
-            <AllHotels></AllHotels>
+            <AllHotels aDate={aDate} dDate={dDate} setAdate={setAdate} setDdate={setDdate}></AllHotels>
           </Route>
          
         </Switch>

@@ -49,10 +49,13 @@
 }
 .arrival-section{
     border:2px solid goldenrod;
+    background-color: white;
  
 }
 .departure-section{
     border:2px solid goldenrod;
+    background-color: white;
+    
 }
 .search-button{
     border:2px solid goldenrod;
