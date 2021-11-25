@@ -64,9 +64,9 @@ const Header = ({ aDate, setAdate, dDate, setDdate }) => {
                         {
                             user.email ? <div>
 
-                                <NavDropdown title={user.displayName} id="collasible-nav-dropdown">
-                                    <Link className="user-link">{userp} My Profile</Link> <br />
-                                    <Link to="/editprofile" className="user-link">{edit}Edit Profile</Link>  <br />
+                                <NavDropdown title={user.displayName} id="collasible-nav-dropdown" className="me-3">
+                                    <Link to="/myprofile" className="user-link">{userp} My Profile</Link> <br />
+                                    <Link  to="/editprofile" className="user-link">{edit}Edit Profile</Link>  <br />
                                     <Link to="/dashboard" className="user-link">{sort}My Orders</Link> <br />
                                     <Link className="user-link">{review}Reviews</Link> <br />
                                     <Link onClick={logOut} className="user-link">{logout}LogOut</Link>

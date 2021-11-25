@@ -1,5 +1,5 @@
 .hotel-card{
-    height: 400px;
+    height: 470px;
     border:1px solid gainsboro
    
   }
@@ -21,4 +21,10 @@
   }
   .spinner{
       color:MediumSpringGreen;
+  }
+  .btn-confirm{
+      background-color: mediumspringgreen;
+      border:mediumspringgreen;
+      border-radius: 10px;
+      font-family: cursive;
   }

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Reviews from '../Reviews/Reviews';
-import Footer from '../Shared/Footer/Footer';
 import { Container, Row, Col } from 'react-bootstrap';
 import HotelsSlicks from '../HotelsSlicks/HotelsSlicks';
 import TextField from '@mui/material/TextField';
@@ -12,7 +11,7 @@ import { useHistory } from 'react-router-dom';
 import useDate from './../../Hooks/useDate';
 import './Home.css'
 const Home = ({ aDate, setAdate, dDate, setDdate }) => {
-
+    
     const { hotels, setDisplayHotels } = useHotels()
     // const [name,setName]=useState([])
     const { name, handleName } = useDate()
@@ -80,7 +79,7 @@ const Home = ({ aDate, setAdate, dDate, setDdate }) => {
 
             <HotelsSlicks ></HotelsSlicks>
             <Reviews></Reviews>
-            <Footer></Footer>
+          
         </Container>
     );
 };

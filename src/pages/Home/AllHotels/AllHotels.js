@@ -2,16 +2,12 @@ import React, { useState } from 'react';
 import { Container, Row, Spinner, Col, Form } from 'react-bootstrap';
 import AllHotel from '../AllHotel/AllHotel';
 import useHotels from './../../Hooks/useHotels';
-import TextField from '@mui/material/TextField';
-import AdapterDateFns from '@mui/lab/AdapterDateFns';
-import LocalizationProvider from '@mui/lab/LocalizationProvider';
-import DatePicker from '@mui/lab/DatePicker';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import './AllHotels.css'
 import useDate from './../../Hooks/useDate';
 
-const AllHotels = ({ aDate, dDate, setAdate, setDdate }) => {
+const AllHotels = ({ aDate, setAdate, dDate, setDdate }) => { 
     const { hotels, displayHotels, setDisplayHotels } = useHotels()
     const [hotelName, setName] = useState([])
     const { name } = useDate()
@@ -79,33 +75,7 @@ const AllHotels = ({ aDate, dDate, setAdate, setDdate }) => {
                         <p className="text-start check-in">Destination by name</p>
                         <span className="">{search}</span>
                         <input type="text" onChange={handleName} placeholder={name} />
-                        <p className="text-start check-in">Check-in date</p>
-                        <div className="date mt-1">
-                            <LocalizationProvider dateAdapter={AdapterDateFns}>
-                                <DatePicker
-                                    value={aDate}
-                                    onChange={(newValue) => {
-                                        setAdate(newValue);
-                                    }}
-                                    renderInput={(params) => <TextField {...params} />}
-
-                                />
-                            </LocalizationProvider>
-
-                        </div>
-                        <p className="text-start check-in">Check-out date</p>
-                        <div className="date mt-1">
-                            <LocalizationProvider dateAdapter={AdapterDateFns}>
-                                <DatePicker
-
-                                    value={dDate}
-                                    onChange={(newValue) => {
-                                        setDdate(newValue);
-                                    }}
-                                    renderInput={(params) => <TextField {...params} />}
-                                />
-                            </LocalizationProvider>
-                        </div>
+                        
                         <div className="adult-child mt-1">
                             <p>Adult</p>
                             <div>
@@ -155,6 +125,10 @@ const AllHotels = ({ aDate, dDate, setAdate, setDdate }) => {
                                     displayHotels.map(hotel => <AllHotel
                                         key={hotel.name}
                                         hotel={hotel}
+                                        aDate={aDate}
+                                        dDate={dDate}
+                                        adult={adult}
+                                        child={child}
                                     ></AllHotel>)
                                 }
                             </Row>
