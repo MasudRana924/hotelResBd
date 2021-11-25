@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import useAuth from './../../Hooks/useAuth';
-
-
+import './MyProfile.css'
 
 const MyProfile = () => {
     const { user } = useAuth()
     const [users, setUsers] = useState([])
 
     useEffect(() => {
-        const url = `http://localhost:5000/users/email?email=${user.email}`
+        const url = `http://localhost:5000/usersemail?email=${user.email}`
         fetch(url)
             .then(res => res.json())
             .then(data => {
+                console.log(data)
                 setUsers(data)
             })
     }, [])
@@ -28,11 +28,15 @@ const MyProfile = () => {
 
                     <Row xs={1} md={1}>
                         <Col>
-                            <div className="">
-                                <h2 className=" text-start" >My Profile </h2>
+                            <div className="profile-section">
+                                
                                 {
                                     users.map(u => <div>
+                                        <img src={u.img} className="user-image" alt="" />
                                         <p>Name:{u.displayName}</p>
+                                        <p>Email:{u.email}</p>
+                                        <p>Phone:{u.phoneno}</p>
+                                    
                                     </div>)
                                 }
 
