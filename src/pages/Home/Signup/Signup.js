@@ -2,6 +2,8 @@ import React from 'react';
 import { Container, Row, Col, Form } from 'react-bootstrap';
 import { Link,useLocation,useHistory } from 'react-router-dom';
 import useAuth from './../../Hooks/useAuth';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './SignUp.css'
 
 const Signup = () => {
@@ -19,7 +21,15 @@ const Signup = () => {
             .then(res => res.json())
             .then(result => {
                 if (result) {
-                    alert('Account created successfully')
+                    toast.success('Login Successfull ', {
+                        position: "top-center",
+                        autoClose: 2000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                    });
                 }
             })
 
@@ -69,7 +79,15 @@ const Signup = () => {
                 </Col>
                 <Col md={4}></Col>
             </Row>
-
+            <ToastContainer position="top-center"
+                autoClose={2000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover />
         </Container>
     );
 };

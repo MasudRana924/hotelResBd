@@ -30,8 +30,10 @@
     "react-scripts": "4.0.3",
     "react-slick": "^0.28.1",
     "react-star-ratings": "^2.3.0",
+    "react-toastify": "^8.1.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.3",
+    "sweetalert": "^2.1.2",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

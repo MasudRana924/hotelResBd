@@ -6,35 +6,30 @@ import TextField from '@mui/material/TextField';
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import DatePicker from '@mui/lab/DatePicker';
-import useHotels from './../../Hooks/useHotels';
 import { useHistory } from 'react-router-dom';
-import useDate from './../../Hooks/useDate';
 import './Home.css'
-const Home = ({ aDate, setAdate, dDate, setDdate }) => {
-    
-    const { hotels, setDisplayHotels } = useHotels()
-    // const [name,setName]=useState([])
-    const { name, handleName } = useDate()
+const Home = () => {
+    const [location, setLocation] = useState([])
+    const [aDate, setAdate] = React.useState(null);
+    const [dDate, setDdate] = React.useState(null);
 
     const history = useHistory()
-    // const handleName=e=>{
-    //     const locatio=e.target.value
-    //     setName(locatio)
-    //  }
+    const handleLocation = e => {
+        const locatio = e.target.value
+        setLocation(locatio)
+    }
     const handleSearch = e => {
-        const matchedHotels = hotels.filter(h => h.location.toLowerCase().includes(name.toLowerCase()));
-        console.log(matchedHotels);
-        const data = { aDate, dDate, name }
-        setDisplayHotels(matchedHotels)
+        e.preventDefault()
+        const data = { aDate, dDate, location }
         if (data) {
             console.log(data)
             history.push('/hotels')
         }
-        else{
-            alert('Please select a arrival and departure date')
+        else {
+            history.push('/home')
         }
 
-        e.preventDefault()
+
     }
 
     return (
@@ -42,8 +37,9 @@ const Home = ({ aDate, setAdate, dDate, setDdate }) => {
             <div className="search-section">
                 <div className="pt-5 w-75 mx-auto ">
                     <Row xs={1} md={4}>
+
                         <Col className="search-button mt-1">
-                            <input onChange={handleName} className="input" type="text" placeholder="Add city or address" />
+                            <input onChange={handleLocation} className="input" type="text" placeholder="Add city or address" />
                         </Col>
                         <Col className="arrival-section mt-1">
                             <LocalizationProvider dateAdapter={AdapterDateFns}>
@@ -79,7 +75,7 @@ const Home = ({ aDate, setAdate, dDate, setDdate }) => {
 
             <HotelsSlicks ></HotelsSlicks>
             <Reviews></Reviews>
-          
+
         </Container>
     );
 };

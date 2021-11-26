@@ -20,8 +20,7 @@ import PrivateRoute from './pages/Home/PrivateRoute/PrivateRoute';
 import MyBookings from './pages/Home/MyBookings/MyBookings';
 import Experiences from './pages/Home/Experiences/Experiences';
 function App() {
-  const [aDate, setAdate] = React.useState(null);
-  const [dDate, setDdate] = React.useState(null);
+  
 
   return (
     <div className="App">
@@ -33,10 +32,10 @@ function App() {
               <Home  ></Home>
             </Route>
             <Route path="/home">
-              <Home aDate={aDate} setAdate={setAdate} setDdate={setDdate} dDate={dDate} ></Home>
+              <Home  ></Home>
             </Route>
             <PrivateRoute path="/hotels">
-              <AllHotels aDate={aDate} setAdate={setAdate} setDdate={setDdate} dDate={dDate} ></AllHotels>
+              <AllHotels ></AllHotels>
             </PrivateRoute>
             <Route path="/editprofile">
               <EditProfile></EditProfile>
@@ -58,7 +57,7 @@ function App() {
             </Route>
           </Switch>
 
-          
+
           <Footer></Footer>
 
         </Router>

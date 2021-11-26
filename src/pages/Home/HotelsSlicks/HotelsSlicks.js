@@ -9,8 +9,10 @@ import Slider from "react-slick";
 import Rating from 'react-rating';
 import './HotelsSlicks.css'
 
+
 const HotelsSlicks = ({ aDate, setAdate, dDate, setDdate }) => {
     const [hotels, setHotels] = useState([])
+  
 
     const map = <FontAwesomeIcon icon={faStreetView} className="rating" />
     const arrow = <FontAwesomeIcon icon={faHotel} className="arrow" />
@@ -64,7 +66,9 @@ const HotelsSlicks = ({ aDate, setAdate, dDate, setDdate }) => {
     return (
         <Container className="mt-5" >
             <div className="hotel-slicks mt-5">
-                <h3 className="text-start">{arrow} Hotels</h3>
+                
+                <h3 className="text-start">{arrow} Hotels</h3> 
+                
                 {
                     hotels.length === 0 ? < div className="spinner"> <Spinner animation="border" className="spinner" />
                     </div> : <Slider {...Rsettings}>

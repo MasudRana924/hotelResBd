@@ -7,11 +7,13 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import './AllHotels.css'
 import useDate from './../../Hooks/useDate';
 
-const AllHotels = ({ aDate, setAdate, dDate, setDdate }) => { 
+
+const AllHotels = () => { 
     const { hotels, displayHotels, setDisplayHotels } = useHotels()
     const [hotelName, setName] = useState([])
-    const { name } = useDate()
+    const { name } = useDate() 
     const search = <FontAwesomeIcon icon={faSearch} className="search" />
+
     const [adult, setAdult] = useState(1)
     const [child, setChild] = useState(1)
     const handlePlus = e => {
@@ -34,6 +36,9 @@ const AllHotels = ({ aDate, setAdate, dDate, setDdate }) => {
             setChild(child - 1)
         }
     }
+
+
+
     const handleName = e => {
         const locatio = e.target.value
         setName(locatio)
@@ -125,10 +130,7 @@ const AllHotels = ({ aDate, setAdate, dDate, setDdate }) => {
                                     displayHotels.map(hotel => <AllHotel
                                         key={hotel.name}
                                         hotel={hotel}
-                                        aDate={aDate}
-                                        dDate={dDate}
-                                        adult={adult}
-                                        child={child}
+                                        
                                     ></AllHotel>)
                                 }
                             </Row>

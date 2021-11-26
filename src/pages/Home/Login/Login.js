@@ -1,13 +1,38 @@
 import React from 'react';
 import { Container, Row, Col, Form } from 'react-bootstrap';
 import './Login.css'
-import { Link ,useLocation,useHistory} from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from './../../Hooks/useAuth';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Login = () => {
     const { error, handleEmail, handlePass, email, pass, setError, setLoading, logInUser, } = useAuth()
     const location = useLocation()
     const location_url = location.state?.from || '/home'
     const history = useHistory()
+    const tostify = () => {
+        toast.success('Login Successfull ', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+    }
+    const tostifyError = () => {
+        toast.error('Login Failed ', {
+            position: "top-center",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+    }
+
     return (
         <Container fluid className="mt-5 pt-5">
             <Row xs={1} md={3}>
@@ -18,10 +43,13 @@ const Login = () => {
                             e.preventDefault()
                             logInUser(email, pass)
                                 .then(result => {
+                                    tostify()
                                     history.push(location_url)
+
                                     setError('')
                                 })
                                 .catch(error => {
+                                    tostifyError()
                                     setError('Email or Password is not valid')
                                 })
                                 .finally(() =>
@@ -48,7 +76,15 @@ const Login = () => {
                 </Col>
                 <Col md={4}></Col>
             </Row>
-
+            <ToastContainer position="top-center"
+                autoClose={2000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover />
         </Container>
     );
 };
