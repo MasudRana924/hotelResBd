@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import useAuth from './../../Hooks/useAuth';
+
 import './MyProfile.css'
 
 const MyProfile = () => {
@@ -20,22 +22,25 @@ const MyProfile = () => {
         <Container fluid className="mt-5">
             <Row xs={1} md={3}>
 
-                <Col md="3">
+                <Col>
 
                 </Col>
 
-                <Col xs={12} md={6}>
+                <Col xs={12} md={4}>
 
                     <Row xs={1} md={1}>
                         <Col>
                             <div className="profile-section">
                                 
+                                
                                 {
                                     users.map(u => <div>
                                         <img src={u.img} className="user-image" alt="" />
-                                        <p>Name:{u.displayName}</p>
-                                        <p>Email:{u.email}</p>
-                                        <p>Phone:{u.phoneno}</p>
+                                        <Link to="/editprofile" className="edit">
+                                        <p >Edit Profile</p></Link>
+                                        <p className="text-start">Name:{u.displayName}</p>
+                                        <p className="text-start">Email:{u.email}</p>
+                                        <p className="text-start">Phone:{u.phoneno}</p>
                                     
                                     </div>)
                                 }

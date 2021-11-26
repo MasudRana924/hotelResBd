@@ -1,31 +1,65 @@
-import React from 'react';
-import { Col } from 'react-bootstrap';
-import Rating from 'react-rating';
+import React, { useState } from 'react';
+import { Container, Col, Form, Row, Button } from 'react-bootstrap';
 
 
 const Experiences = (props) => {
-    const { name, img, cost, rating } = props.place
+
+    const [review, setReview] = useState('');
+    const [rating, setRating] = useState('');
+    const [image, setImage] = useState(null);
+    const handleAddReview = (e) => {
+        const formData = { rating, review, image }
+        fetch('http://localhost:5000/reviews', {
+            method: 'post',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.insertedId) {
+                    alert('Review added succesfully')
+                    e.target.reset()
+                }
+            })
+        e.preventDefault()
+    }
+
     return (
-        <Col className="mt-3">
-            <div className="hotel-card">
-                <img className="hotel-image" src={img} alt="" />
-                <p className="text-start mt-1 fw-bold">{name}</p>
-                <div className=" price-rating">
-                    <p className="desc text-start text-muted mt-1">${cost} per person</p>
+        <Container>
+            <Row xs={1} md={3}>
+                <Col></Col>
+                <Col xs={12}>
+                    <h2 className=" text-start dashboard" >Review</h2>
 
-                    <Rating
-                        initialRating={rating}
-                        emptySymbol="far fa-star rating"
-                        fullSymbol="fas fa-star rating"
+                    <div className="">
+                        <Form onSubmit={handleAddReview}>
 
-                        readonly >
+                            <Form.Group as={Col} className="mb-3 text-start">
+                                <Form.Label>Give Rating</Form.Label>
+                                <Form.Control onChange={e => setRating(e.target.value)} type="number" placeholder="Give even numbers  rating" />
+                            </Form.Group>
+                            <Form.Group className="mb-3 text-start" controlId="exampleForm.ControlTextarea1">
+                                <Form.Label>Your Feedback</Form.Label>
+                                <Form.Control onChange={e => setReview(e.target.value)} as="textarea" rows={3} />
+                            </Form.Group>
+                            <Form.Group as={Col} className="mb-3 text-start">
+                                <Form.Label>Image</Form.Label>
+                                <Form.Control onChange={e => setImage(e.target.files[0])} type="file" placeholder="Image" accept="image/*" />
+                            </Form.Group>
 
-                    </Rating>
-                </div>
+                            <Button variant="primary" type="submit" className="w-100 text-center">
+                                Submit
+                            </Button>
+                        </Form>
 
-            </div>
+                    </div>
+                </Col>
+                <Col></Col>
+            </Row>
 
-        </Col >
+        </Container>
     );
 };
 

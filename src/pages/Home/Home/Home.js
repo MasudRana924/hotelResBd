@@ -30,7 +30,7 @@ const Home = ({ aDate, setAdate, dDate, setDdate }) => {
             console.log(data)
             history.push('/hotels')
         }
-        else {
+        else{
             alert('Please select a arrival and departure date')
         }
 

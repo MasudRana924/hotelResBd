@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStreetView, faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { faStreetView, faHotel} from '@fortawesome/free-solid-svg-icons'
 import "bootstrap/dist/css/bootstrap.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Rating from 'react-rating';
 import './HotelsSlicks.css'
-import { Link } from 'react-router-dom';
+
 const HotelsSlicks = ({ aDate, setAdate, dDate, setDdate }) => {
     const [hotels, setHotels] = useState([])
    
     const map = <FontAwesomeIcon icon={faStreetView} className="rating" />
-    const arrow = <FontAwesomeIcon icon={faArrowRight} className="rating" />
+    const arrow = <FontAwesomeIcon icon={faHotel} className="arrow" />
     useEffect(() => {
         fetch('./hotels.json')
             .then(res => res.json())
@@ -67,10 +67,10 @@ const HotelsSlicks = ({ aDate, setAdate, dDate, setDdate }) => {
 
 
             <div className="hotel-slicks mt-5">
-                <div className="hotel-header">
-                    <h3 className="">Hotels</h3>
-                    <Link to="/hotels" className="link"><p>See all {arrow}</p></Link>
-                </div>
+             
+                    <h3 className="text-start">{arrow} Hotels</h3>
+                    
+               
                 <Slider {...Rsettings}>
 
                     {

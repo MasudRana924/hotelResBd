@@ -1,29 +1,28 @@
 import React, { useState } from 'react';
 import Rating from 'react-rating';
-import { Col, Modal } from 'react-bootstrap';
+import { Col, Form, Modal } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStreetView } from '@fortawesome/free-solid-svg-icons'
 import './AllHotel.css'
 import useAuth from './../../Hooks/useAuth';
 import { useForm } from 'react-hook-form';
-
 const AllHotel = (props) => {
-    const {user}=useAuth()
-    const {name, img, desc, cost, rating, star, room } = props.hotel
+    const { user} = useAuth()
+    const { name, img, desc, cost, rating, star, room } = props.hotel
    
-
-    const map = <FontAwesomeIcon icon={faStreetView} className="rating" />
     const [show, setShow] = useState(false);
     // modal er function
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    const map = <FontAwesomeIcon icon={faStreetView} className="rating" />
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const onSubmit = data => {
-        const found = props.hotel
-        const adult=props.adult
+        const found=props.hotel
+        const adult=props.adult 
         const child=props.child
-        data.info = {found,adult,child}
-        data.status='pending'
+
+        data.info = { found, adult, child }
+        data.status = 'pending'
         fetch('http://localhost:5000/bookings', {
             method: 'POST',
             headers: {
@@ -34,14 +33,14 @@ const AllHotel = (props) => {
             .then(res => res.json())
             .then(result => {
                 if (result) {
-                   
+                  
                     alert('Orders placed Successfully')
                     reset()
 
                 }
             })
             handleClose(true)
-      
+
     }
     return (
         <Col className="mt-3">
@@ -67,31 +66,35 @@ const AllHotel = (props) => {
 
 
                 <p className="text-start desc ms-1">{map} {desc}</p>
-                <button onClick={handleShow}  className="btn-confirm" >Confirm Booking</button>
+                <button onClick={handleShow}   className="btn-confirm" >Confirm Booking</button>
             </div>
-            <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                    <Modal.Title>{name}</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
+            <div>
+                <Modal show={show} onHide={handleClose}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>{name}</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
                     <form className="shipping-form" onSubmit={handleSubmit(onSubmit)}>
-                        {/* register your input into the hook by invoking the "register" function */}
+                            {/* register your input into the hook by invoking the "register" function */}
 
-                        <input defaultValue={user.displayName} {...register("name")} placeholder="Your name" />
-                        {/* include validation with required or other standard HTML validation rules */}
-                        <input defaultValue={user.email} {...register("email", { required: true })} placeholder="Your email" />
-                         {/* errors will return when field validation fails  */}
-                         {errors.email && <span className="error">This field is required</span>}
-                       
-                        <input defaultValue={props.aDate} {...register("arrival")} placeholder="" />
-                        <input defaultValue={props.dDate} {...register("departure")} placeholder="" />
-                       
-                        <br />
-                        <input type="submit" className="input-button" />
-                    </form>
-                </Modal.Body>
+                            <input defaultValue={user.displayName} {...register("name")} placeholder="Your name" />
+                            {/* include validation with required or other standard HTML validation rules */}
+                            <input defaultValue={user.email} {...register("email", { required: true })} placeholder="Your email" />
+                            {/* errors will return when field validation fails  */}
+                            {errors.email && <span className="error">This field is required</span>}
 
-            </Modal>
+                            <input defaultValue={props.aDate} {...register("arrival")} placeholder="" />
+                            <input defaultValue={props.dDate} {...register("departure")} placeholder="" />
+
+                            <br />
+                            <input type="submit" className="input-button" />
+                        </form>
+                    </Modal.Body>
+
+                </Modal>
+            </div>
+
+
 
         </Col >
     );
