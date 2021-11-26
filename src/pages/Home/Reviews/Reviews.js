@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { Container } from 'react-bootstrap';
+import { Container, Spinner } from 'react-bootstrap';
 import Rating from 'react-rating';
 import './Reviews.css'
 
@@ -59,33 +59,39 @@ const Reviews = () => {
 
             <div className="container ">
                 <h2 className="text-start ms-3 pt-3 text-muted">Reviews</h2>
-                <Slider {...Rsettings}>
 
-                    {
-                        reviews.map(review => (
+                {
+                    reviews.length === 0 ? < div className="spinner"> <Spinner animation="border" className="spinner" />
+                    </div> :
+                        <Slider {...Rsettings}>
 
-                            <div className="out" >
-                                <div className="card-review">
-                                    <img src={review.img} className="review-image" alt="" />
-                                    <Rating
-                                        initialRating={review.rating}
-                                        emptySymbol="far fa-star rating"
-                                        fullSymbol="fas fa-star rating"
-                                        readonly ></Rating>
+                            {
+                                reviews.map(review => (
 
-                                    <h5 className="card-title">{review.name}</h5>
+                                    <div className="out" >
+                                        <div className="card-review">
+                                            <img src={review.img} className="review-image" alt="" />
+                                            <Rating
+                                                initialRating={review.rating}
+                                                emptySymbol="far fa-star rating"
+                                                fullSymbol="fas fa-star rating"
+                                                readonly ></Rating>
 
-
-
-                                </div>
-                            </div>
-
-                        ))
-                    }
+                                            <h5 className="card-title">{review.name}</h5>
 
 
 
-                </Slider>
+                                        </div>
+                                    </div>
+
+                                ))
+                            }
+
+
+
+                        </Slider>
+                }
+
             </div>
 
         </Container>
