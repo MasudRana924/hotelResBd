@@ -23,7 +23,7 @@ const AllHotel = (props) => {
 
         data.info = { found, adult, child }
         data.status = 'pending'
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://whispering-oasis-97010.herokuapp.com/bookings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

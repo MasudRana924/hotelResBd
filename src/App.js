@@ -57,6 +57,8 @@ function App() {
               <Experiences></Experiences>
             </Route>
           </Switch>
+
+          
           <Footer></Footer>
 
         </Router>

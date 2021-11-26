@@ -12,7 +12,7 @@ const EditProfile = () => {
 
     const handleProfile = (e) => {
         const formData = {name,phone,address,image}
-        fetch(`http://localhost:5000/updateuser?email=${user.email}`, {
+        fetch(`https://whispering-oasis-97010.herokuapp.com/updateuser?email=${user.email}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

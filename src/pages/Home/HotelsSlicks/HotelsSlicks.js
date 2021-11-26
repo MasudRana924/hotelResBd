@@ -15,7 +15,7 @@ const HotelsSlicks = ({ aDate, setAdate, dDate, setDdate }) => {
     const map = <FontAwesomeIcon icon={faStreetView} className="rating" />
     const arrow = <FontAwesomeIcon icon={faHotel} className="arrow" />
     useEffect(() => {
-        fetch('./hotels.json')
+        fetch('https://whispering-oasis-97010.herokuapp.com/hotels')
             .then(res => res.json())
             .then(data => {
                 

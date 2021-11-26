@@ -10,7 +10,7 @@ const MyBookings = () => {
     const [orders, setOrders] = useState([])
     
     useEffect(() => {
-        const url = `http://localhost:5000/mybookings?email=${user.email}`
+        const url = `https://whispering-oasis-97010.herokuapp.com/mybookings?email=${user.email}`
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -20,7 +20,7 @@ const MyBookings = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure that you want to delete')
         if (proceed) {
-            const url = `http://localhost:5000/mybookings/${id}`
+            const url = `https://whispering-oasis-97010.herokuapp.com/mybookings/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

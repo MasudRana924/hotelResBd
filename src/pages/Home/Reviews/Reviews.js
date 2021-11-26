@@ -10,7 +10,7 @@ import './Reviews.css'
 const Reviews = () => {
     const [reviews, setReviews] = useState([])
     useEffect(() => {
-        fetch('./review.json')
+        fetch('https://whispering-oasis-97010.herokuapp.com/getreviews')
             .then(res => res.json())
             .then(data => {
                 setReviews(data)

@@ -11,7 +11,7 @@ const Signup = () => {
     const history = useHistory()
     const saveUser = (email, diaplayName) => {
         const user = { email, diaplayName }
-        fetch('http://localhost:5000/users', {
+        fetch('https://whispering-oasis-97010.herokuapp.com/users', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(user)

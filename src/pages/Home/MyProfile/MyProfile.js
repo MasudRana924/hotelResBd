@@ -10,7 +10,7 @@ const MyProfile = () => {
     const [users, setUsers] = useState([])
 
     useEffect(() => {
-        const url = `http://localhost:5000/usersemail?email=${user.email}`
+        const url = `https://whispering-oasis-97010.herokuapp.com/usersemail?email=${user.email}`
         fetch(url)
             .then(res => res.json())
             .then(data => {
