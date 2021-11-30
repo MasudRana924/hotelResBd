@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Row, Spinner, Col, Form } from 'react-bootstrap';
 import AllHotel from '../AllHotel/AllHotel';
 import useHotels from './../../Hooks/useHotels';
@@ -6,6 +6,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import './AllHotels.css'
 import useDate from './../../Hooks/useDate';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import  Rating  from 'react-rating';
 
 
 const AllHotels = () => { 
@@ -13,7 +17,7 @@ const AllHotels = () => {
     const [hotelName, setName] = useState([])
     const { name } = useDate() 
     const search = <FontAwesomeIcon icon={faSearch} className="search" />
-
+    const [places, setPlaces] = useState([])
     const [adult, setAdult] = useState(1)
     const [child, setChild] = useState(1)
     const handlePlus = e => {
@@ -70,6 +74,48 @@ const AllHotels = () => {
         setDisplayHotels(matchedRoom)
     }
 
+    useEffect(() => {
+        fetch('./places.json')
+            .then(res => res.json())
+            .then(data => setPlaces(data))
+    }, [])
+    let Rsettings = {
+        dots: false,
+        infinite: false,
+        speed: 1000,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        initialSlide: 0,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+
+                }
+            },
+
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    initialSlide: 2,
+
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+
+                }
+            }
+        ]
+    };
     return (
         <Container fluid className="mt-5 pt-5">
             <Row xs={1} md={2}>
@@ -138,6 +184,35 @@ const AllHotels = () => {
                 </Col>
             </Row>
 
+            <div className="w-75 mx-auto mt-5 pt-5">
+            <h3 className="text-start">Explore Bangladesh</h3> 
+            {
+                    places.length === 0 ? < div className="spinner"> <Spinner animation="border" className="spinner" />
+                    </div> : <Slider {...Rsettings}>
+                        {
+                            places.map(place => (
+                                <div className="" >
+                                    <div className="hotels-card ms-1">
+                                        <img className="hotel-image" src={place.img} alt="" />
+                                        <p className="mt-1 fw-bold">{place.name}</p>
+                                        <div className=" ms-1 me-1">
+                                            <p className="desc text-center text-muted ">${place.cost} per nigth</p>
+                                            <Rating
+                                                initialRating={place.rating}
+                                                emptySymbol="far fa-star rating"
+                                                fullSymbol="fas fa-star rating"
+                                                readonly >
+                                            </Rating>
+                                        </div>
+                                      
+                                    </div>
+                                </div>
+
+                            ))
+                        }
+                  </Slider>
+                }
+            </div>
 
         </Container>
     );

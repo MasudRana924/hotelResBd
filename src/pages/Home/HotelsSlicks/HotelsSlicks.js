@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Spinner } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStreetView, faHotel } from '@fortawesome/free-solid-svg-icons'
+import { faStreetView, faHotel,faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import "bootstrap/dist/css/bootstrap.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Rating from 'react-rating';
 import './HotelsSlicks.css'
+import { Link } from 'react-router-dom';
 
 
 const HotelsSlicks = ({ aDate, setAdate, dDate, setDdate }) => {
@@ -15,7 +16,8 @@ const HotelsSlicks = ({ aDate, setAdate, dDate, setDdate }) => {
   
 
     const map = <FontAwesomeIcon icon={faStreetView} className="rating" />
-    const arrow = <FontAwesomeIcon icon={faHotel} className="arrow" />
+    const hotel = <FontAwesomeIcon icon={faHotel} className="hotel" />
+    const arrow = <FontAwesomeIcon icon={faArrowRight}  />
     useEffect(() => {
         fetch('https://whispering-oasis-97010.herokuapp.com/hotels')
             .then(res => res.json())
@@ -66,9 +68,11 @@ const HotelsSlicks = ({ aDate, setAdate, dDate, setDdate }) => {
     return (
         <Container className="mt-5" >
             <div className="hotel-slicks mt-5">
+                <div className="hotel-header"> 
                 
-                <h3 className="text-start">{arrow} Hotels</h3> 
-                
+                <h3 className="text-start">{hotel} Hotels</h3> 
+                 <Link to="/hotels" className="text-decoration-none text-dark"> <p>See All {arrow}</p></Link>
+                </div>
                 {
                     hotels.length === 0 ? < div className="spinner"> <Spinner animation="border" className="spinner" />
                     </div> : <Slider {...Rsettings}>

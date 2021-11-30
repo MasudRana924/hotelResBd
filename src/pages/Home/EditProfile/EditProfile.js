@@ -11,13 +11,17 @@ const EditProfile = () => {
     const [image, setImage] = useState(null);
 
     const handleProfile = (e) => {
-        const formData = {name,phone,address,image}
+        if(!image){
+            alert('eneter iamage')
+        }
+        const formData ={name,image,address,phone};
+        
         fetch(`https://whispering-oasis-97010.herokuapp.com/updateuser?email=${user.email}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(formData)
+            body:JSON.stringify(formData)
         })
             .then(res => res.json())
             .then(data => {

@@ -19,6 +19,7 @@ import Signup from './pages/Home/Signup/Signup';
 import PrivateRoute from './pages/Home/PrivateRoute/PrivateRoute';
 import MyBookings from './pages/Home/MyBookings/MyBookings';
 import Experiences from './pages/Home/Experiences/Experiences';
+import Bookings from './pages/Home/Bookings/Bookings';
 function App() {
   
 
@@ -34,9 +35,12 @@ function App() {
             <Route path="/home">
               <Home  ></Home>
             </Route>
-            <PrivateRoute path="/hotels">
-              <AllHotels ></AllHotels>
+            <PrivateRoute path="/bookings/:hotelId">
+              <Bookings></Bookings>
             </PrivateRoute>
+            <Route path="/hotels">
+            <AllHotels ></AllHotels>
+            </Route>
             <Route path="/editprofile">
               <EditProfile></EditProfile>
             </Route>
@@ -49,7 +53,7 @@ function App() {
             <Route path="/signup">
               <Signup></Signup>
             </Route>
-            <Route path="/bookings">
+            <Route path="/mybookings">
               <MyBookings></MyBookings>
             </Route>
             <Route path="/reviews">

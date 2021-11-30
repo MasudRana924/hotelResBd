@@ -5,6 +5,7 @@
   }
  .shipping-form{
      padding: 15px;
+     border:1px solid gainsboro;
  } 
  .shipping-form input{
      width:100%;

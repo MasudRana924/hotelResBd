@@ -35,7 +35,7 @@ const Header = ({ aDate, setAdate, dDate, setDdate }) => {
                                 <NavDropdown title={user.displayName} id="collasible-nav-dropdown" className="me-3">
                                     <Link to="/myprofile" className="user-link">{userp} My Profile</Link> <br />
                                     <Link to="/editprofile" className="user-link">{edit}Edit Profile</Link>  <br />
-                                    <Link to="/bookings" className="user-link">{sort}My Bookings</Link> <br />
+                                    <Link to="/mybookings" className="user-link">{sort}My Bookings</Link> <br />
                                     <Link to="/reviews" className="user-link">{review}Reviews</Link> <br />
                                     <Link onClick={logOut} className="user-link">{logout}LogOut</Link>
                                 </NavDropdown>
