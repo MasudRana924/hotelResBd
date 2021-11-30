@@ -47,7 +47,7 @@ const Bookings = () => {
 
     const [hotel, setHotel] = useState({})
     useEffect(() => {
-        fetch(`http://localhost:5000/hotels/${hotelId}`)
+        fetch(`https://whispering-oasis-97010.herokuapp.com/hotels/${hotelId}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)
