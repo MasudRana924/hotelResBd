@@ -19,8 +19,8 @@ const MyProfile = () => {
             })
     }, [])
     return (
-        <Container fluid className="mt-5">
-            <Row xs={1} md={3}>
+        <Container fluid className="mt-5 pt-5">
+            <Row xs={1} md={3} className="mt-5 ">
 
                 <Col>
 

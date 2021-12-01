@@ -23,7 +23,7 @@ const EditProfile = () => {
         console.log(phone)
         console.log(address)
         console.log(image)
-        fetch(`http://localhost:5000/updateuser?email=${user.email}`, {
+        fetch(`https://whispering-oasis-97010.herokuapp.com/updateuser?email=${user.email}`, {
             method: 'PUT',         
             body:formData
         })
