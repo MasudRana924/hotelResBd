@@ -14,14 +14,18 @@ const EditProfile = () => {
         if(!image){
             alert('eneter iamage')
         }
-        const formData ={name,image,address,phone};
-        
-        fetch(`https://whispering-oasis-97010.herokuapp.com/updateuser?email=${user.email}`, {
-            method: 'PUT',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body:JSON.stringify(formData)
+        const formData = new FormData()
+        formData.append('name',name)
+        formData.append('phone',phone)
+        formData.append('address',address)
+        formData.append('image',image)
+        console.log(name)
+        console.log(phone)
+        console.log(address)
+        console.log(image)
+        fetch(`http://localhost:5000/updateuser?email=${user.email}`, {
+            method: 'PUT',         
+            body:formData
         })
             .then(res => res.json())
             .then(data => {

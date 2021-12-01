@@ -35,7 +35,7 @@ const MyProfile = () => {
                                 
                                 {
                                     users.map(u => <div>
-                                        <img src={u.img} className="user-image" alt="" />
+                                        <img src={`data:image/png;base64,${u.image}`}className="user-image" alt="" />
                                         <Link to="/editprofile" className="edit">
                                         <p >Edit Profile</p></Link>
                                         <p className="text-start">Name:{u.displayName}</p>
